@@ -1,5 +1,6 @@
 package com.example;
 
+import java.util.Arrays;
 
 public class MinHeap extends Util{
 
@@ -143,6 +144,12 @@ public class MinHeap extends Util{
 
         arr[pos] = number_to_change;
         heapifyUp(pos);
+
+    }
+
+    public static String getArrayString(){
+
+        return Arrays.toString(arr);
 
     }
 
