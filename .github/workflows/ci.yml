@@ -20,5 +20,5 @@ jobs:
           java-version: 17
 
       - name: Build with Maven
-        working-directory: ./ass1
+        working-directory: ./minheap
         run: mvn -B package
