@@ -1,2 +1,4 @@
+com\CLI.class
+com\Metrics\Metrics.class
 com\example\Util.class
 com\example\MinHeap.class

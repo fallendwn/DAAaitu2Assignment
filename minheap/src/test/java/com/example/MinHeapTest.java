@@ -1,15 +1,19 @@
 package com.example;
 
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import com.Metrics.Metrics;
 
 class MinHeapTest {
 
     @BeforeEach
     void setUp() {
         MinHeap.createArray(10);
+        Metrics.reset();
     }
 
     @Test
@@ -17,9 +21,8 @@ class MinHeapTest {
         MinHeap.insertionInHeap(5);
         MinHeap.insertionInHeap(3);
         MinHeap.insertionInHeap(8);
-
-
         assertEquals(3, MinHeap.arr[0]);
+        
     }
 
     @Test

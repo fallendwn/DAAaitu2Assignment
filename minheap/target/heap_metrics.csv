@@ -1,0 +1,18 @@
+Operation,Comparisons,Swaps,Insertions,Time(ns),Time(ms)
+Insertion in Heap,1,0,1,6400,0
+Insertion in Heap,2,0,2,1900,0
+Insertion in Heap,3,0,3,1500,0
+HeapifyUp,4,1,3,4600,0
+DecreaseKey,4,1,3,1343500,1
+Insertion in Heap,1,0,1,1300,0
+Insertion in Heap,2,0,2,1700,0
+Insertion in Heap,4,1,3,1700,0
+Insertion in Heap,5,1,4,1600,0
+MergeTwoMinHeaps,5,1,4,941700,0
+Insertion in Heap,1,0,1,1100,0
+Insertion in Heap,3,1,2,2400,0
+Insertion in Heap,4,1,3,1500,0
+Insertion in Heap,1,0,1,1200,0
+Insertion in Heap,3,1,2,1600,0
+Insertion in Heap,4,1,3,1200,0
+DeleteRoot,10,3,3,7000,0
