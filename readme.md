@@ -19,5 +19,5 @@ Features implemented
    Used internally when inserting or decreasing key
    Time Complexity O(log n)
 
-Plots:
-<img width="1280" height="640" alt="image" src="https://github.com/user-attachments/assets/72713cf7-8578-4530-878b-1a8335e8b313" />
+
+
