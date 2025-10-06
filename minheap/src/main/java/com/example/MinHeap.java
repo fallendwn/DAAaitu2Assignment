@@ -118,18 +118,73 @@ public class MinHeap extends Util{
 
     }
 
-    public static int[] mergeTwoMinHeaps(int[] arr, int[] arr2){
-        Metrics.startTimer();
-        for(int i = 0 ; i < arr2.length; i ++){
 
-            insertionInHeap(arr2[i]);
+    private static void heapifyDown(int[] arr, int i){
+        int smallest = i ;
+        int left = 2 * i + 1;
+        int right = 2 * i + 2;
+        
+        if (left < elementsIn && arr[left] < arr[smallest]){
+
+            smallest = left;
 
         }
+
+        if (right < elementsIn && arr[right] < arr[smallest]){
+
+            smallest = right;
+
+        }
+
+        if (smallest != i){
+
+            Metrics.swaps++;
+            swap(arr, i , smallest);
+            heapifyDown(arr,smallest);
+
+        }
+
+
+
+    }
+
+    private static void buildMinHeap(int[] arr){
+
+        for(int i = (elementsIn / 2) - 1; i >=0 ; i--){
+
+
+            heapifyDown(arr, i);
+
+        }
+
+    }
+
+    
+        public static int[] mergeTwoMinHeaps(int[] arr, int[] arr2){
+        Metrics.startTimer();
+        int arr1Count = elementsIn;
+        int newSize = arr1Count + arr2.length;
+        int[] merged = new int[newSize];
+        for(int i = 0 ; i < arr1Count; i ++){
+
+            merged[i] = arr[i];
+
+        }
+        for(int i = 0 ; i < arr2.length;i++){
+
+            merged[arr1Count + i] = arr2[i];
+
+        }
+
+       
+        MinHeap.arr = merged;
+        elementsIn = newSize;
+        buildMinHeap(arr);
         Metrics.stopTimer();
         Metrics.logReport("MergeTwoMinHeaps");
         return arr;
-
     }
+
 
 
     private static int[] heapifyUp(int pos){
